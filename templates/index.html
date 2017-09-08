@@ -5,9 +5,45 @@
 	<link rel="icon" href="favicon.png">
 	<meta charset='UTF-8'/>
   	<meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:500,600" rel="stylesheet">
   	<link rel="stylesheet" type="text/css" href="static/materialize/css/materialize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="static/materialize/js/jquery.js"></script>
     <script type="text/javascript" src="static/materialize/js/materialize.js"></script>
+
+    <style>
+      .googleCalendar{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    padding-bottom: 100% ;
+    }
+
+  .googleCalendar iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    .social-button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 30px;
+    display: inline-flex;
+    }
+
+    .social-button:visited {
+      color:#2B3A42;
+    }
+    </style>
+
 </head>
 
 <body>
@@ -46,18 +82,33 @@
     
     <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
       <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+
+      <div><img data-u="image" src="static/images/oat.jpg" />
+            <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
+           <img src="static/images/logo.png" height="150" width="150">
+          </div>
+            </div>
+
         <div>
           <img data-u="image" src="static/images/csi4.jpg" />
-          <div style="position:absolute;top:5px;left:5px;width:480px;height:120px;z-index:0;">
+          <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
            <img src="static/images/logo.png" height="150" width="150">
           </div>
           
         </div>
             <div><img data-u="image" src="static/images/csi2.jpg" />
-              <div style="position:absolute;top:5px;left:5px;width:480px;height:120px;z-index:0;">
+            <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
            <img src="static/images/logo.png" height="150" width="150">
           </div>
             </div>
+
+          <div>
+          <img data-u="image" src="static/images/csi5.jpg" />
+          <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
+           <img src="static/images/logo.png" height="150" width="150">
+          </div>
+        </div>
+
       </div>
     <script type="text/javascript">jssor_1_slider_init();</script>
     </header>
@@ -65,20 +116,30 @@
 
   <div class="section center" style="background-color: #EFEFEF">
     <div class="row container">
-      <h2 class="header" style="color: #2B3A42">About CSI-DTU</h2>
-      <p style="color:#3F5765; font-size: 1.5em" >CSI is the oldest technical socities in DTU, founded in 2000. We aim to provide a platform to learn and share knowledge, inculcate technical knowledge among students through IDGs, encourage junior-senior interaction and provide exposure to technical events.</p>
+      <h2 class="header" style="color: #2B3A42; font-family: 'Exo', sans-serif; font-weight: 600;"><i class="material-icons">info</i> About CSI-DTU</h2>
+      <p style="color:#3F5765; font-size: 1.5em; font-family: 'Exo', sans-serif; font-weight: 500;" >Founded in 2000, CSI is the oldest technical society in DTU. We aim to provide a platform to learn and share knowledge, inculcate technical skills among students through IDGs, encourage junior-senior interaction and provide exposure to technical events.</p>
     </div>
   </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="static/images/test.jpg"></div>
+
+  
+  <div class="section" style="background-color: #2B3A42">
+    <div class="row container">
+      <h2 class="header" style="color: #BDD4DE; font-family: 'Exo', sans-serif; font-weight: 600;"><i class="material-icons">today</i> Event Schedule</h2>
+      <div class="googleCalendar">
+      <iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=2&amp;bgcolor=%23BDD4DE&amp;src=eo0muims9alod4j4llafjpa3g0%40group.calendar.google.com&amp;color=%23BDD4DE&amp;ctz=Asia%2FCalcutta" style="border-width:0" width="400" height="500" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </div>
+    
+
+  <div class="section" style="background-color: #BDD4DE">
+    <div class="row container center">
+      <h4 class="header" style="color: #2B3A42; font-family: 'Exo', sans-serif; font-weight: 600;">CSI-DTU @ 
+      <a href="https://www.facebook.com/dtu.csi"><button class="social-button" style="color: #2B3A42"><span class="fa fa-facebook fa-2x"></span></button></a>
+
+      <a href="https://github.com/CSI-DTU"><button class="social-button" style="color: #2B3A42"><span class="fa fa-github fa-2x"></span></button></a>
+      </h4>
+    </div>
   </div>
 
 </body>
-
-
-<script>
-$(document).ready(function(){
-  $('.parallax').parallax();
-});
-
-</script>

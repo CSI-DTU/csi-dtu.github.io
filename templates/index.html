@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+	<title>CSI DTU</title>
+	<link rel="icon" href="favicon.png">
+	<meta charset='UTF-8'/>
+  	<meta name="viewport" content="width=device-width">
+  	<link rel="stylesheet" type="text/css" href="static/materialize/css/materialize.css">
+    <script type="text/javascript" src="static/materialize/js/jquery.js"></script>
+    <script type="text/javascript" src="static/materialize/js/materialize.js"></script>
+</head>
+
+<body>
+  <header>    
+    <script src="static/materialize/js/jssor.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function() {
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 800,
+              $SlideEasing: $Jease$.$OutQuint,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+        };
+    </script>
+    
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+      <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+        <div>
+          <img data-u="image" src="static/images/csi4.jpg" />
+          <div style="position:absolute;top:5px;left:5px;width:480px;height:120px;z-index:0;">
+           <img src="static/images/logo.png" height="150" width="150">
+          </div>
+          
+        </div>
+            <div><img data-u="image" src="static/images/csi2.jpg" />
+              <div style="position:absolute;top:5px;left:5px;width:480px;height:120px;z-index:0;">
+           <img src="static/images/logo.png" height="150" width="150">
+          </div>
+            </div>
+      </div>
+    <script type="text/javascript">jssor_1_slider_init();</script>
+    </header>
+
+
+  <div class="section center" style="background-color: #EFEFEF">
+    <div class="row container">
+      <h2 class="header" style="color: #2B3A42">About CSI-DTU</h2>
+      <p style="color:#3F5765; font-size: 1.5em" >CSI is the oldest technical socities in DTU, founded in 2000. We aim to provide a platform to learn and share knowledge, inculcate technical knowledge among students through IDGs, encourage junior-senior interaction and provide exposure to technical events.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="static/images/test.jpg"></div>
+  </div>
+
+</body>
+
+
+<script>
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
+
+</script>

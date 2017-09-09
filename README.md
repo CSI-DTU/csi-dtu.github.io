@@ -5,4 +5,6 @@
 	<li>To solve an existing issue, please fork the repository and send a Pull Request.</li>
 </ul>
 
+<strong>Please push only indented HTML</strong>
+
 <span style="font-size: 5px">The use of this code is governed by <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>.</span>

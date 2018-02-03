@@ -2599,14 +2599,14 @@
 
 /* One */
 
-	#one:before {
+	#zeroo:before {
 		background-image: url("../../images/cover.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: cover;
 		content: '';
 		display: block;
-		height: 16em;
+		height: 15em;
 		width: 100%;
 	}
 

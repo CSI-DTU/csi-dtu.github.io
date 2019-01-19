@@ -1,273 +1,606 @@
 <!DOCTYPE html>
-<html lang='en-US'>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="img/csi-logo.png" />
+    <title>CSI-DTU</title>
+    <!-- For tab coloring in-->
+    <!--chrome firefox OS Opera-->
+    <meta name="theme-color" content="#626A6D" />
+    <!--Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#626A6D" />
+    <!--iOS Safari-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-<!--
-The following color scheme has been used - https://color.adobe.com/Birdfolio-Blues-color-theme-1945976/?showPublished=false
--->
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700,900"
+      rel="stylesheet"
+    />
 
-<head>
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
-	<title>CSI DTU</title>
+    <!-- Owl Carousel -->
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
 
-  <!--Webpage Favicon-->
-	<link rel="icon" href="images/favicon.ico">
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
 
-	<meta charset='UTF-8'/>
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
 
-  <!-- Helps zooming on mobile devices -->
-  <meta name="viewport" content="width=device-width">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="transparent-navbar">
+      <!-- container -->
+      <div class="container">
+        <!-- navbar header -->
+        <div class="navbar-header">
+          <!-- Logo -->
+          <div class="navbar-brand">
+            <a class="logo" href="index.html">
+              <img
+                class="logo-img"
+                src="./img/csi-logo.png"
+                alt="logo"
+                style="min-height: 55px; min-width: 55px;"
+              />
+              <img
+                class="logo-alt-img"
+                src="./img/csi-logo.png"
+                alt="logo"
+                style="min-height: 55px; min-width: 55px;"
+              />
+            </a>
+          </div>
+          <!-- /Logo -->
 
-  <!-- Address Bar color for Android devices -->
-  <meta name="theme-color" content="#3F5765">
+          <!-- Mobile toggle -->
+          <button class="navbar-toggle"><i class="fa fa-bars"></i></button>
+          <!-- /Mobile toggle -->
+        </div>
+        <!-- /navbar header -->
 
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="Welcome to CSI-DTU!"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="http://csidtu.tech/"/>
-  <meta property="og:image" content="images/og.jpg"/>
-  <meta property="og:site_name" content="CSI-DTU"/>
-  <meta property="og:description" content="CSI-DTU's Official Webpage."/>
+        <!-- Navigation -->
+        <nav id="nav">
+          <ul class="main-nav nav navbar-nav navbar-right">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Invictus</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- /Navigation -->
+      </div>
+      <!-- /container -->
+    </header>
+    <!-- /Header -->
 
-  <!-- Material Icons CSS -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Home -->
+    <div id="home">
+      <!-- background image -->
+      <div
+        class="section-bg"
+        style="background-image:url(./img/dtucampus.jpg)"
+        data-stellar-background-ratio="0.5"
+      ></div>
+      <!-- /background image -->
 
-  <!-- Exo font -->
-  <link href="https://fonts.googleapis.com/css?family=Exo:500,600" rel="stylesheet">
-
-  <!-- Materialize CSS files -->
-	<link rel="stylesheet" type="text/css" href="css/materialize.css">
-
-  <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Jquery -->
-  <script type="text/javascript" src="js/jquery.js"></script>
-
-  <!-- Materialize JS File -->
-  <script type="text/javascript" src="js/materialize.js"></script>
-
-
-  <!-- CSS for Responsive Google Calendar -->
-  <style>
-    .googleCalendar{
-      position: relative;
-      height: 50vh;
-      width: 100%;
-      padding-bottom: 100% ;
-    }
-
-    .googleCalendar iframe{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    </style>
-
-    <!--CSS for Social Media Buttons -->
-    <style>
-      .social-button {
-        background-color: Transparent;
-        background-repeat:no-repeat;
-        border: none;
-        cursor:pointer;
-        overflow: hidden;
-        outline:none;
-        font-size: 30px;
-        display: inline-flex;
-      }
-
-      .social-button:visited {
-        color:#2B3A42;
-      }
-
-      .card-image
-      {
-          width: 42%;
-          margin: 3%;
-      }
-
-    </style>
-</head>
-
-<body>
-  <header>    
-    <!-- Load jssor.js -->
-    <script src="js/jssor.js" type="text/javascript"></script>
-
-    <!--Script for slider -->
-    <script type="text/javascript">
-      jssor_1_slider_init = function(){
-        var jssor_1_options = {
-          $AutoPlay: true,
-          $SlideDuration: 800,
-          $SlideEasing: $Jease$.$OutQuint,
-          $ArrowNavigatorOptions:{
-            $Class: $JssorArrowNavigator$
-          },
-          $BulletNavigatorOptions:{
-            $Class: $JssorBulletNavigator$
-          }
-        };
-        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-        function ScaleSlider(){
-          var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-          if (refSize){
-            refSize = Math.min(refSize, 1920);
-            jssor_1_slider.$ScaleWidth(refSize);
-          }
-          else{
-            window.setTimeout(ScaleSlider, 30);
-          }
-        }
-        ScaleSlider();
-        $Jssor$.$AddEvent(window, "load", ScaleSlider);
-        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-      };
-    </script>
-    
-    <!-- Slider Div -->
-    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
-
-      <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
-
-<!--
-          <div>
-              <img data-u="image" src="images/csi4.jpg" />
-              <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
-                  <img src="images/logo.png" height="150" width="150">
+      <!-- home wrapper -->
+      <div class="home-wrapper">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row">
+            <!-- home content -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="home-content">
+                <h1>Welcome to CSI-DTU!</h1>
+                <h4 class="lead">Scroll down to explore!</h4>
               </div>
-          </div>
-          -->
-
-          <div>
-              <a href="invictus/index.html">
-                  <img data-u="image" src="images/invictus.jpg" />
-                  <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
-                  </div>
-              </a>
-          </div>
-<!--
-
-          <div>
-          <img data-u="image" src="images/oat.jpg" />
-            <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
-              <img src="images/logo.png" height="150" width="150">
             </div>
+            <!-- /home content -->
+          </div>
+          <!-- /row -->
         </div>
+        <!-- /container -->
+      </div>
+      <!-- /home wrapper -->
+    </div>
+    <!-- /Home -->
 
+    <!-- About -->
+    <div id="about" class="section" style="background-color: #ffcd63;">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- section title -->
+          <div class="section-title">
+            <h3 class="title">
+              <span>About</span> <span style="color: #dd0a37;">Us</span>
+            </h3>
+          </div>
+          <!-- /section title -->
 
-        <div>
-          <img data-u="image" src="images/csi5.jpg" />
-            <div style="position:absolute;top:30%;left:45%;width:480px;height:120px;z-index:0;">
-              <img src="images/logo.png" height="150" width="150">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <!-- about content -->
+            <div class="about-content">
+              <p>
+                Founded in 2000, CSI is the oldest technical society in DTU. We
+                aim to provide a platform to learn and share knowledge,
+                inculcate technical skills among students through IDGs,
+                encourage junior-senior interaction and provide exposure to
+                technical events.
+              </p>
+              <p>
+                CSI has been instrumental in guiding the Indian IT industry down
+                the right path since its formative years. Today, the CSI has 71
+                chapters all over India, 418 student branches, and more than
+                90000 members including India's most famous IT industry leaders,
+                brilliant scientists and dedicated academicians.
+              </p>
             </div>
+            <!-- /about content -->
+          </div>
         </div>
--->
+        <!-- row -->
       </div>
-
+      <!-- /container -->
     </div>
-    <!-- Slider Init -->
-    <script type="text/javascript">jssor_1_slider_init();</script>
+    <!-- /About -->
 
-  </header>
-  <!--Slider Ends -->
-
-  <!--About Us -->
-  <div class="section center" style="background-color: #EFEFEF">
-    <div class="row container">
-      <h4 class="header" style="color: #2B3A42;font-family: 'Exo', sans-serif; font-weight: 600;"> About CSI-DTU</h4>
-
-        <p style="color:#3F5765; font-size: 1.4em; font-family: 'Exo', sans-serif; font-weight: 500;" >Founded in 2000, CSI is the oldest technical society in DTU. We aim to provide a platform to learn and share knowledge, inculcate technical skills among students through IDGs, encourage junior-senior interaction and provide exposure to technical events.
-        <!--
-            <br>
-        <br>
-            <a href="invictus/index.html">
-                Explore CSI's events</a> at <a href="https://www.facebook.com/InvictusDtu/"> INVICTUS </a>
-            -->
-        </p>
-    </div>
-  </div>
-
-
-  <div class="section center" style="background-color: #BDD4DE">
-      <div class="row container">
-          <h4 class="header" style="color: #2B3A42;font-family: 'Exo', sans-serif; font-weight: 600;">INVICTUS</h4>
-
-          <p style="color:#3F5765; font-size: 1.4em; font-family: 'Exo', sans-serif; font-weight: 500;" >
-              Invictus is the first edition as the Umbrella Techfest , being organized jointly by all the technical societies of DTU. Carrying on the legacy of the technical fests at DTU , this year's fest will again be a platform for budding technocrats to explore and put their talent to test when they get to compete with other prodigies of their field in the nation. The techfest will cover a wide variety of events mainly in the technical domain with some other miscellaneous events.
-
-              <br>
-              <a href="invictus/index.html" target="_blank">
-                  Explore CSI's events at INVICTUS </a>
-          </p>
-
-      </div>
-  </div>
-
-  <div class="section center" style="background-color: #EFEFEF">
-      <div class="container center">
-          <div class="row center">
-
-              <h4 class="header center" style="color: #2B3A42;font-family: 'Exo', sans-serif; font-weight: 600;">OUR SPONSORS</h4>
-
+    <!-- Galery -->
+    <div id="galery" style="margin-top: 60px; margin-bottom: 30px;">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- section title -->
+          <div class="section-title">
+            <h3 class="title">
+              <span>Some</span> <span style="color: #dd0a37;">Glimpses</span>
+            </h3>
           </div>
-          <div class="row center">
-              <h5 class="header" style="color: #2B3A42;font-family: 'Exo', sans-serif; font-weight: 600;">Title Sponsor</h5>
-              <a href="http://www.samsung.com/in/" target="_blank">
-              <img class="card-image" src="images/samsung_logo_PNG14.png"></a>
-          </div>
-
-          <div class="row center">
-              <h5 class="header" style="color: #2B3A42;font-family: 'Exo', sans-serif; font-weight: 600;"> Media Partners </h5>
-              <a href="http://www.igniteengineers.com/" target="_blank">
-              <img class="card-image" src="images/Ignite_Engineers_Logo_for_Website_Pamphlet.png" style="width: 30%; margin: 2%; margin-right: 8%">
-              </a>
-              <a href="https://www.duexpress.in/" target="_blank">
-              <img class="card-image" src="images/DUExpress_logo.png" style="width: 30%;margin: 2%; margin-left: 8%">
-              </a>
-
-          </div>
-
-          <div class="row center">
-              <h5 class="header" style="color: #2B3A42;font-family: 'Exo', sans-serif; font-weight: 600;"> Youth Community Partner </h5>
-              <a href="https://www.facebook.com/theeducationtree?fref=ts" target="_blank">
-              <img class="card-image" src="images/Poster%20logo.png" style="width: 20%; margin: 1px;">
-              </a>
-          </div>
-
-          <div class="row center">
-              <h5 class="header" style="color: #2B3A42;font-family: 'Exo', sans-serif; font-weight: 600;"> Experience Partner </h5>
-              <a href="https://www.xoxoday.com/" target="_blank">
-                  <img class="card-image" src="images/experience_partner" style="width: 30%; margin: 1px;">
-              </a>
-          </div>
-
-
-      </div>
-  </div>
-
-
-
-  <!-- Google Calender -->
-  <div class="section" style="background-color: #2B3A42">
-    <div class="row container">
-      <h4 class="header" style="color: #BDD4DE;font-family:'Exo', sans-serif;font-weight: 600;"><i class="material-icons">today</i> Event Schedule</h4>
-        <div class="googleCalendar">
-          <iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=2&amp;bgcolor=%23BDD4DE&amp;src=eo0muims9alod4j4llafjpa3g0%40group.calendar.google.com&amp;color=%23BDD4DE&amp;ctz=Asia%2FCalcutta" style="border-width:0" width="400" height="500" frameborder="0" scrolling="no"></iframe>
         </div>
+        <!-- row -->
+        <!-- row -->
+        <div class="row">
+          <!-- galery owl -->
+          <div id="galery-owl" class="owl-carousel owl-theme">
+            <!-- galery item -->
+            <div class="galery-item"><img src="./img/car2.jpg" alt="" /></div>
+            <!-- /galery item -->
+
+            <!-- galery item -->
+            <div class="galery-item"><img src="./img/car3.jpg" alt="" /></div>
+            <!-- /galery item -->
+
+            <!-- galery item -->
+            <div class="galery-item"><img src="./img/car4.png" alt="" /></div>
+
+            <!-- galery item -->
+            <div class="galery-item"><img src="./img/car1.jpg" alt="" /></div>
+            <!-- /galery item -->
+          </div>
+          <!-- /galery owl -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
     </div>
-  </div>
-    
-  <!--Find Us @ -->
-  <div class="section" style="background-color: #EFEFEF">
-    <div class="row container center">
-      <h5 class="header" style="color: #2B3A42; font-family: 'Exo', sans-serif; font-weight: 600;">CSI-DTU @ 
-        <a href="https://www.facebook.com/dtu.csi"><button class="social-button" style="color: #2B3A42"><span class="fa fa-facebook fa-2x"></span></button></a>
-        <a href="https://github.com/CSI-DTU"><button class="social-button" style="color: #2B3A42"><span class="fa fa-github fa-2x"></span></button></a>
-      </h5>
+    <!-- /Galery -->
+
+    <!-- Event Schedule -->
+    <div id="schedule" class="section" style="background-color: #a9ffa3;">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- section title -->
+          <div class="section-title">
+            <h3 class="title">
+              <span>Invictus</span>
+              <span style="color: #dd0a37;">Schedule</span>
+            </h3>
+          </div>
+          <!-- /section title -->
+
+          <div class="col-md-8 col-md-offset-2">
+            <div class="events-wrapper">
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!--<i class="fa fa-clock-o"></i> 10:00 AM - 3:00 PM-->
+                  </p>
+                  <!--<p><i class="fa fa-map-marker"></i> TW1GF1</p>-->
+                  <h3 class="event-title">Code Golf</h3>
+                  <p>
+                    Does the idea “The more, the better” fascinate you?? Well if
+                    so, you might reconsider your thoughts ! Because CSI-DTU, in
+                    association with Invictus 2018, the annual Technological
+                    fest of DTU brings CodeGolf, an online programming contest
+                    where the shortest code is the winner. So lessen your code
+                    and prepare algorithms and be ready for CodeGolf.
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!-- <i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!-- <i class="fa fa-map-marker"></i><a href="#"></a>-->
+                  </p>
+                  <h3 class="event-title">Bid Bash</h3>
+                  <p>
+                    CSI-DTU in association with Invictus 2018, the Annual
+                    Technological Fest Of DTU, presents: BID BASH It’s time to
+                    build Your Ultimate Dream Team For all the football freaks,
+                    if you have spent your nights watching football matches and
+                    kept yourself updated with football player ratings? So, be
+                    prepared to not let your favourite football star slip away
+                    from you and make the team you always wanted to! If you do,
+                    then SUIT UP!! The ultimate battle to prove yourself above
+                    the others is here. ACCEPT THE CHALLENGE🔥 and win exciting
+                    cash prizes.
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!--<i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!--<i class="fa fa-map-marker"></i><a href="#"> Cryptex Webpage</a>-->
+                  </p>
+                  <h3 class="event-title">Cryptex</h3>
+                  <p>
+                    The treasure hunt is on, live on our site!! For every set of
+                    images , exists a clue and all you have to do is to put on
+                    your sherlock hats to find a one word answer which can win
+                    you exciting goodies. So visit the site to get on the
+                    rollercoaster ride for the event: Show your sherlock skills
+                    and win exciting rewards For every set of images there
+                    exists a clue and all you have to do is to put on your
+                    sherlock hats to find a one word answer which can win you
+                    exciting goodies.
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!-- <i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!-- <i class="fa fa-map-marker"></i><a href="#"></a>-->
+                  </p>
+                  <h3 class="event-title">Tech Wiz</h3>
+                  <p>
+                    The computer geeks please tighten your seat belts because we
+                    have got a problem here. CSI-DTU and SITE in association
+                    with Invictus 2018, The Annual Technological Fest Of DTU,
+                    presents: "TechWiz" A quiz curated exclusively for all the
+                    computer geeks aiming to challenge their OS, DBMS, DS,
+                    Algorithmic and CN knowledge.
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!--<i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!--<i class="fa fa-map-marker"></i><a href="https://www.facebook.com/dtu.csi/">CSI Facebook Page</a>-->
+                  </p>
+                  <h3 class="event-title">Neuvo Gengo</h3>
+                  <p>
+                    We have always heard LIFE is uncertain. If you are facing
+                    the daily life's ambiguity then, CSI-DTU, in association
+                    with Invictus 2018, the annual Technological fest of DTU,
+                    Neuvo Gengo . All you are required to do is to code in an
+                    entirely new language , whose name will be provided only 15
+                    minutes before the commencement of the event. But don’t be
+                    scared , the prelims of this event comprise of a C/C++
+                    pen/paper quiz,
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!--<i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!--<i class="fa fa-map-marker"></i><a href="https://www.facebook.com/dtu.csi/">CSI Facebook Page</a>-->
+                  </p>
+                  <h3 class="event-title">Troll It</h3>
+                  <p>
+                    It is said, "There exists a meme artist in each and everyone
+                    of us". We all come across memes regularly which tickles our
+                    bones adding moments of laughter in our lives.So, in order
+                    to showcase your meme making talent, CSI-DTU, in association
+                    with Invictus , the annual Technological fest of DTU brings
+                    an online meme making competition, Troll-It! Inbox a meme or
+                    a short video on the given link and wait for the meme-lovers
+                    to come crawling and like your post! 👍🏻 Great goodies are up
+                    for grabs! 🎁 Inbox a meme or a short video on the given
+                    link and wait for the meme-lovers to come crawling and like
+                    your post!
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!--<i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!--<i class="fa fa-map-marker"></i><a href="https://www.facebook.com/dtu.csi/">CSI Facebook Page</a>-->
+                  </p>
+                  <h3 class="event-title">Mathrix</h3>
+                  <p>
+                    Do you have an analytical and problem- solving bent of mind?
+                    Are you a maths aficionado? CSI-DTU, in association with
+                    Invictus , the annual Technological fest of DTU present you
+                    the perfect opportunity to show your mathematical acumen!
+                    Let’s gear up for Mathrix, our next online aptitude testing
+                    quiz. Exciting prizes up for grabs!
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!--<i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!--<i class="fa fa-map-marker"></i><a href="https://www.facebook.com/dtu.csi/">CSI Facebook Page</a>-->
+                  </p>
+                  <h3 class="event-title">Sudo Code</h3>
+                  <p>
+                    Are you a sudoku champ? Are you a pro coder? We give you the
+                    opportunity to be both!! CSI-DTU, in association with
+                    Invictus , the annual Technological fest of DTU brings you
+                    Sudo code, an innovative game to baffle your minds and
+                    proclaim yourself as The Ultimate Sudoku Champ! Prelims:
+                    Finals: Prizes worth 9.Cranium
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+              <!-- event -->
+              <div class="event">
+                <div class="event-content">
+                  <p class="event-time">
+                    <!--<i class="fa fa-clock-o"></i> 8:00 PM-->
+                  </p>
+                  <p>
+                    <!--<i class="fa fa-map-marker"></i><a href="https://www.facebook.com/dtu.csi/">CSI Facebook Page</a>-->
+                  </p>
+                  <h3 class="event-title">Cranium</h3>
+                  <p>
+                    Can't you C yourself without C++? Then you're here at the
+                    right place! CSI-DTU, in association with Invictus , the
+                    annual Technological fest of DTU brings you the much awaited
+                    programming quiz, Cranium, to set your nerves wracking and
+                    pens scribbling.
+                  </p>
+                </div>
+              </div>
+              <!-- /event -->
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
     </div>
-  </div>
-</body>
+    <!-- /Event Schedule -->
+
+    <!-- Sponsors -->
+    <div id="sponsors" class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- section title -->
+          <div class="section-title">
+            <h3 class="title">
+              <span>Our</span> <span style="color: #dd0a37;">Sponsors</span>
+            </h3>
+          </div>
+          <!-- /section title -->
+          <!-- sponsor -->
+          <div>
+            View our
+            <a
+              href="CSIDTU Brochure-min.pdf"
+              target="_blank"
+              class="btn btn-info"
+              style="font-weight: bold"
+            >
+              Sponser's Brochure
+            </a>
+            and get to know the benifits of sponsoring our events in INVICTUS
+            2019!
+          </div>
+          <!-- /sponsor -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /Sponsors -->
+
+    <!-- Contact -->
+    <div id="contact" class="section">
+      <!-- background image -->
+      <div class="section-bg" style="background-color: #8baee8;"></div>
+      <!-- /background image -->
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- section title -->
+          <div class="section-title">
+            <h3 class="title">
+              <span style="color: #000000;">Contact</span>
+              <span style="color: #dd0a37;">Info</span>
+            </h3>
+          </div>
+          <!-- /section title -->
+
+          <!-- contact -->
+          <div class="col-sm-3">
+            <div class="contact">
+              <h3>Parikshit Hooda</h3>
+              <p>+91-9654665754</p>
+              <p>parikshit_bt2k16@dtu.ac.in</p>
+            </div>
+          </div>
+          <!-- /contact -->
+
+          <!-- contact -->
+          <div class="col-sm-3">
+            <div class="contact">
+              <h3>Aditya Malhotra</h3>
+              <p>+91-9582424209</p>
+              <p>adi.malhotra02@gmail.com</p>
+            </div>
+          </div>
+          <!-- /contact -->
+
+          <!-- contact -->
+          <div class="col-sm-3">
+            <div class="contact">
+              <h3>Dev Swaroop</h3>
+              <p>+91-9650965505</p>
+              <p>devswaroop004@gmail.com</p>
+            </div>
+          </div>
+          <!-- /contact -->
+
+          <!-- contact -->
+          <div class="col-sm-3">
+            <div class="contact">
+              <h3>Nikhil Kr. Singh</h3>
+              <p>+91-7836913485</p>
+              <p>nikhilsingh97@gmail.com</p>
+            </div>
+          </div>
+          <!-- /contact -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+
+      <!-- Map -->
+      <!-- <div id="map"></div> -->
+      <!-- /Map -->
+    </div>
+    <!-- /Contact -->
+
+    <!-- Footer -->
+    <footer id="footer">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- footer logo -->
+          <div class="col-md-4 col-md-push-4">
+            <div class="footer-brand">
+              <a class="logo" href="index.html">
+                <img
+                  class="logo-img"
+                  src="./img/csi-logo.png"
+                  alt="logo"
+                  style="min-height: 80px; min-height: 80px;"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- /footer logo -->
+
+          <!-- contact social -->
+          <div class="col-md-4 col-md-push-4">
+            <div class="contact-social">
+              <a href="http://facebook.com/dtu.csi"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a href="https://github.com/CSI-DTU"
+                ><i class="fa fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <!-- /contact social -->
+
+          <!-- copyright -->
+          <div class="col-md-4 col-md-pull-8">
+            <span class="copyright"
+              ><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <i class="fa fa-heart-o" aria-hidden="true"></i> by
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span
+            >
+          </div>
+          <!-- /copyright -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </footer>
+    <!-- /Footer -->
+
+    <!-- jQuery Plugins -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
